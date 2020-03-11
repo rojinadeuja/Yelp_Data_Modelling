@@ -1,20 +1,34 @@
 import pymongo
+import json
 
+#Set up the MongoClient and the connection
 client = pymongo.MongoClient("mongodb://localhost:27017/") #Connection will be established to the default host (localhost) and port (27017)
 
-db = client['yelp_database'] #Create database
+#Create database
+db = client['yelp_database'] 
 
-checkins = db['checkin'] #Create collection
-print(checkins)
- 
-# dblist = myclient.list_database_names()  #Check if database created
-# if "yelp_database" in dblist:
-#     print("The database exists.")
-# else:
-#     print("The database does not exist!")
+#Create collection
+checkins = db['checkin'] 
 
-# mycol = mydb["checkin"]
+#Read from json file into a list
+checkin_list =[]
+for line in open('yelp_academic_dataset_checkin.json', 'r'):
+    checkin_list.append(json.loads(line))
 
-# collist = mydb.list_collection_names()
-# if "checkin" in collist:
-#     print("The collection exists.")
+#Delete all rows in collection
+checkins.delete_many({})
+#Insert list into collection
+checkins.insert_many(checkin_list)
+
+#Query the collection
+cursor = checkins.find({})
+
+#Print first five rows to check if inserted
+i=1
+for document in cursor:
+    if(i<5):
+        print(document)
+        i=i+1
+        
+#Close connection
+client.close()
