@@ -5,6 +5,11 @@
 ## Last Updated: {04-27-2020}
 ##################################################
 
+'''
+ To Run:
+ python 01_part1_embed_reviews_on_business.py
+'''
+
 # Import necessary modules
 import pymongo
 import json
@@ -22,14 +27,14 @@ myquery = {}
 mydoc = reviews.find(myquery) # db.collection.find({})
 
 result = list(mydoc) 
-cnt=0
+#cnt=0 # Uncomment for log
 for x in result:
-    print("Rows updated:", cnt)
+    #print("Rows updated:", cnt) # Uncomment for log
     business_id = x['business_id'] # x is a dict
     myquery = { "business_id": business_id}
     newvalues = {"$push": {"reviews" : x}}
     businesses.update(myquery, newvalues)
-    cnt = cnt+1
+    #cnt = cnt+1 # Uncomment for log
 
 # Close connection
 client.close()

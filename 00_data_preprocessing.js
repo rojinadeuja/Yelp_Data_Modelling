@@ -23,7 +23,7 @@ print(db.business.remove({ "categories" : { $not: /Restaurant/}}))
 print(db.business.remove({ "review_count" : { $lt: 10}}))
 
 // Show final count of business
-print("The count of rows in collection business: ", db.business.count() )
+print("The count of rows in collection business is now: ", db.business.count() )
 
 // Count of all items in review
 print("The count of rows in collection review: ", db.review.count())
@@ -35,4 +35,4 @@ print(db.review.remove({"date": { $not: /^2018/}}))
 print(db.review.remove({ "useful" : { $not: {$gte: 5}}}))
 
 // Show final count of review
-print("The count of rows in collection review: ", db.review.count() )
+print("The count of rows in collection review is now: ", db.review.count() )
