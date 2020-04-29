@@ -8,8 +8,11 @@ Available as JSON files, use it to teach students about databases, to learn NLP,
 
 ### To prepare the data:
 Get the mongodb dump files from : [https://unl.box.com/s/0zjl0n1sl46zgkinqscrtn5m6519zaz4]
+
 OR
+
 Get the data from [https://www.yelp.com/dataset/download]
+
 Run the scripts in the order:
 1. import_script.ps1 
 2. 00_data_preprocessing.js
