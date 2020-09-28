@@ -1,5 +1,5 @@
 # Yelp_Data_Modelling
-Data Modelling on the data set by Yelp using ### Python.
+Data Modelling on the data set by Yelp using **Python**.
 
 ### Dataset: Yelp Open Dataset [https://www.yelp.com/dataset]
 
