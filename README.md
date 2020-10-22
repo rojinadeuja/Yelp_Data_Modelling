@@ -1,6 +1,8 @@
 # Yelp_Data_Modelling
 Data Modelling on the data set by Yelp using **Python**.
 
+## For full details <a hred="https://github.com/rojinadeuja/Yelp_Data_Modelling/blob/master/Yelp_Topic_Modelling_Report.pdf">[View Report Here]</a>
+
 ### Dataset: Yelp Open Dataset [https://www.yelp.com/dataset]
 
 The Yelp dataset is a subset of Yelp's businesses, reviews, and user data for use in personal, educational, and academic purposes. 
