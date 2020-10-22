@@ -1,7 +1,9 @@
 # Yelp_Data_Modelling
 Data Modelling on the data set by Yelp using **Python**.
 
-## For full details <a hred="https://github.com/rojinadeuja/Yelp_Data_Modelling/blob/master/Yelp_Topic_Modelling_Report.pdf">[View Report Here]</a>
+## For full details <a href="https://github.com/rojinadeuja/Yelp_Data_Modelling/blob/master/Yelp_Topic_Modelling_Report.pdf">[View Report Here]</a>
+
+
 
 ### Dataset: Yelp Open Dataset [https://www.yelp.com/dataset]
 
